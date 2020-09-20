@@ -66,11 +66,13 @@ btn_numbers = []
 for i in range(10):
     btn_numbers.append(Button(width=4, text=str(i), bd=6, command=lambda x=i: enterNumber(x)))
 
+
 btn_text = 1
 for i in range(0,3):
     for j in range(0,3):
         btn_numbers[btn_text].place(x=30+j*90, y=70+i*70)
         btn_text+=1
+
 
 btn_zero = Button(width=32, text='0', bd=5, command=lambda x=0: enterNumber(x))
 btn_zero.place(x=25, y=280)
@@ -97,6 +99,7 @@ btn_operator = []
 for i in range(4):
     btn_operator.append(Button(width=4, font="times 14 bold", bd=6, command=lambda x=i: enter_operators(x)))
 
+
 btn_operator[0]['text'] = '+'
 btn_operator[1]['text'] = '-'
 btn_operator[2]['text'] = '*'
@@ -104,5 +107,6 @@ btn_operator[3]['text'] = '/'
 
 for i in range(4):
     btn_operator[i].place(x=290, y=70+i*70)
+
 
 root.mainloop()
